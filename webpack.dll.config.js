@@ -1,13 +1,9 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    modules: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-    ]
+    modules: ['react', 'react-dom', 'react-router-dom'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,7 +13,7 @@ module.exports = {
   plugins: [
     new webpack.DllPlugin({
       name: '[name]',
-      path: path.join(__dirname, '[name]-manifest.json')
-    })
+      path: path.join(__dirname, '[name]-manifest.json'),
+    }),
   ],
-}
+};
