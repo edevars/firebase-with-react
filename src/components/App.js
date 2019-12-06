@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
-const H1 = styled.h1`
-  color: orange;
-  font-size: 72px;
-`;
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from '../pages/login';
 
 class App extends Component {
   render() {
-    return <H1>🌈 ¡Hola mundo! 🎉</H1>;
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+        </Switch>
+      </Router>
+    );
   }
 }
 
