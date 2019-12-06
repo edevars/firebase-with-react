@@ -1,0 +1,9 @@
+{
+  "name": "react-with-firebase",
+  "version": "1.0.0",
+  "description": "A project to practice firebase with react",
+  "main": "index.js",
+  "repository": "https://github.com/edevars/firebase-with-react.git",
+  "author": "edevars",
+  "license": "MIT"
+}
