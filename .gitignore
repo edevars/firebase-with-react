@@ -178,4 +178,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Build
+
+modules-manifest.json
+dist
+
 # End of https://www.gitignore.io/api/node,react,linux,macos,windows
