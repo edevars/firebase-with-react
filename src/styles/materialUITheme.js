@@ -1,13 +1,18 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { orange, lightBlue } from '@material-ui/core/colors';
 
 export const materialUiTheme = createMuiTheme({
   palette: {
     primary: {
-      main: orange[400],
+      light: '#63a4ff',
+      main: '#1976d2',
+      dark: '#004ba0',
+      contrastText: '#ffffff',
     },
     secondary: {
-      main: lightBlue[600],
+      light: '#514aac',
+      main: '#18227c',
+      dark: '#00004f',
+      contrastText: '#ffffff',
     },
   },
 });
