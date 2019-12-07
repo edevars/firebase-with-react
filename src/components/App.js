@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { Theme } from '../styles';
+import { ThemeProvider as MaterialUIThemeProvider } from '@material-ui/core/styles';
 
+import { Theme } from '../styles';
+import { materialUiTheme } from '../styles/materialUITheme';
 import Login from '../pages/Login';
 
 const GlobalStyle = createGlobalStyle`
@@ -24,9 +26,11 @@ class App extends Component {
       <Router>
         <GlobalStyle />
         <ThemeProvider theme={Theme}>
-          <Switch>
-            <Route exact path="/" component={Login} />
-          </Switch>
+          <MaterialUIThemeProvider theme={materialUiTheme}>
+            <Switch>
+              <Route exact path="/" component={Login} />
+            </Switch>
+          </MaterialUIThemeProvider>
         </ThemeProvider>
       </Router>
     );
