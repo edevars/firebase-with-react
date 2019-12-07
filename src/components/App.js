@@ -1,24 +1,17 @@
+//Routing and page components
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { ThemeProvider as MaterialUIThemeProvider } from '@material-ui/core/styles';
-
-import { Theme } from '../styles';
-import { materialUiTheme } from '../styles/materialUITheme';
 import Login from '../pages/Login';
 
-const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Proza+Libre&display=swap');
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  h1,h2,h3,h4,h5,h6 {
-    font-family: 'Proza Libre', sans-serif;
-  }
-`;
+//Themening for styled-components
+import { ThemeProvider } from 'styled-components';
+import { Theme } from '../styles';
+
+//Themeing for material UI
+import { ThemeProvider as MaterialUIThemeProvider } from '@material-ui/core/styles';
+import { materialUiTheme } from '../styles/materialUITheme';
+
+import { GlobalStyle } from '../styles/GlobalStyle';
 
 class App extends Component {
   render() {
