@@ -1,24 +1,24 @@
 import React from 'react';
-import { Paper, FormControl, TextField, Fab, Typography, Avatar } from '@material-ui/core';
-import { AccountCircleOutlined, LockOpen } from '@material-ui/icons';
+import { Paper, FormControl, TextField, Fab, Typography } from '@material-ui/core';
+import { LockOpen } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
+import logo from '../../images/logo.png';
+import styled from 'styled-components';
+
+const StyledLogo = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+`;
 
 const useStyles = makeStyles(theme => ({
   paper: {
     position: 'absolute',
-    width: '450px',
-    top: 0,
+    width: '320px',
     right: 0,
-    bottom: 0,
     left: 0,
+    top: '200px',
     margin: 'auto',
-    maxHeight: '650px',
-  },
-  avatar: {
-    marginTop: theme.spacing(8),
-    backgroundColor: theme.palette.secondary.main,
-    width: '72px',
-    height: '72px',
   },
   title: {
     margin: theme.spacing(3, 0, 2),
@@ -43,9 +43,7 @@ export const LoginForm = () => {
   return (
     <Paper className={classes.paper}>
       <FormControl className={classes.form}>
-        <Avatar className={classes.avatar}>
-          <AccountCircleOutlined style={{ fontSize: 72 }} />
-        </Avatar>
+        <StyledLogo src={logo}></StyledLogo>
         <Typography component="h1" variant="h5" className={classes.title}>
           Log in
         </Typography>
@@ -77,7 +75,7 @@ export const LoginForm = () => {
           className={classes.submit}
           variant="extended"
           size="medium"
-          color="secondary"
+          color="primary"
           aria-label="add"
         >
           <LockOpen className={classes.buttonIcon} />
