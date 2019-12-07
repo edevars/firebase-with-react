@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import styled from 'styled-components';
+import { LoginForm } from '../components/login/LoginForm';
 
 const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.yellow};
@@ -23,6 +25,7 @@ class Login extends Component {
     return (
       <Wrapper>
         <TopContainerClip />
+        <LoginForm></LoginForm>
       </Wrapper>
     );
   }
