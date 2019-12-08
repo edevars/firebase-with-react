@@ -69,7 +69,6 @@ export const LoginForm = () => {
           label="password"
           name="password"
           autoComplete="password"
-          autoFocus
         />
         <Fab
           className={classes.submit}
