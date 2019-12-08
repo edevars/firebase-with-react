@@ -13,6 +13,22 @@ import { materialUiTheme } from '../styles/materialUITheme';
 
 import { GlobalStyle } from '../styles/GlobalStyle';
 
+//Firebase confi
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+
+var firebaseConfig = {
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appID: process.env.APP_ID,
+};
+
+firebase.initializeApp(firebaseConfig);
+
 class App extends Component {
   render() {
     return (
